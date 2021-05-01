@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--secondary-font);
+}
+:root{
+    --bg: #252a34;
+    --bg-dark: #1d1d1d;
+    --color: #eaeaea;
+    --light-color: #eaeaeaa4;
+    --primary-color: #08d9d6;
+    --secondary-color: #ff2e63;
+    --font: 'Alegreya', serif;
+    --secondary-font:'Source Sans Pro', sans-serif;
+}
+body{
+    background: var(--bg);
+    color: var(--color);
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- main section ---------- */
+#main{
+    width: 100%;
+    height: 50em;
+    backdrop-filter: blur(1px);
+    backdrop-filter: contrast(250px);
+    position: relative;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+#main::before{
+    content: '';
+    width: 100%;
+    height: 30em;
+    position: absolute;
+    right: 25em;
+    z-index: -1;
+    background: rgb(19, 19, 19);
+}
+#main .user_info{
+    margin: 0 30px;
+}
+#main .user_info .user_name{
+    font-family: var(--font);
+    font-size: 5em;
+}
+#main p{
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    color: var(--light-color);
+}
+#main .user_img img{
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    margin: 0 30px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.479);
+}
+#main .user_info .btn{
+    width: 9em;
+    height: 3em;
+    margin-top: 1.5em;
+    background: none;
+    color: var(--color);
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;   
+    border: 2px solid var(--secondary-color);
+    transition: all .4s;
+}
+#main .user_info .btn:hover{
+    background: var(--secondary-color);  
+}
+#particles-js{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+/* ---------- skills section ---------- */
+.skills{
+    width: 100%;
+    height: 50em;
+    position: relative;
+    flex-direction: column;
+}
+.skill_box{
+    flex-wrap: wrap;
+}
+.skill_box .box{
+    margin: 2em 2em;
+    width: 15em;
+    height: 12em;
+    background: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+.skill_box .box::before{
+    content: '';
+    position: absolute;
+    background: var(--secondary-color);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: bottom;
+    transform: scaleY(0.1);
+    transition: all .3s;
+}
+.skill_box .box:hover::before{
+    transform: scaleY(1);
+}
+.skill_box .box i{
+    margin-bottom: .1em;
+}
+.skill_head{
+    font-size: 12em;
+    font-family: var(--font);
+    opacity: 0.6;
+}
+
+/* ---------- Media Query ---------- */
+@media (max-width: 1120px){
+    .skills{
+        height: 100%;
+        padding: 5em 0;
+    }
+}
+@media (max-width: 900px){
+    .skills{
+        height: 100%;
+        padding: 5em 0;
+    }
+    .skill_box .box{
+        margin: 2em 2em;
+        width: 12em;
+        height: 8em;
+    }
+    .skill_head{
+        font-size: 5em;
+        font-family: var(--font);
+        opacity: 0.6;
+    }
+    
+}
+@media (max-width: 700px){
+    body{
+        font-size: 13px;
+    }
+    .skill_box .box{
+        margin: 2em 2em;
+        width: 12em;
+        height: 8em;
+    }
+}
