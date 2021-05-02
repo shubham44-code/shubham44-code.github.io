@@ -19,6 +19,7 @@
 body{
     background: var(--bg);
     color: var(--color);
+    overflow-X: hidden;
 }
 .center{
     display: flex;
@@ -93,6 +94,28 @@ body{
     position: relative;
     flex-direction: column;
 }
+.skills::before, .skills::after{
+    content: '';
+    position: absolute;
+    width: 20em;
+    height: 20em;background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 50%;
+    /* opacity: 0.6; */
+}
+.skills::before{
+    
+    left: -10em;
+    bottom: 0;
+}
+.skills::after{
+    right: -10em;
+    top: 8em;background: #f953c6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b91d73, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b91d73, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
 .skill_box{
     flex-wrap: wrap;
 }
@@ -101,6 +124,10 @@ body{
     width: 15em;
     height: 12em;
     background: var(--bg-dark);
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    border-bottom: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +146,7 @@ body{
     height: 100%;
     z-index: -1;
     transform-origin: bottom;
-    transform: scaleY(0.1);
+    transform: scaleY(0.03);
     transition: all .3s;
 }
 .skill_box .box:hover::before{
@@ -129,13 +156,39 @@ body{
     margin-bottom: .1em;
 }
 .skill_head{
-    font-size: 12em;
+    font-size: 6em;
     font-family: var(--font);
     opacity: 0.6;
 }
 
+
+/* ---------- projects ---------- */
+.projects{
+    width: 100%;
+    height: 50em;
+    position: relative;
+}
+#particles-js2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(20px);
+}
 /* ---------- Media Query ---------- */
 @media (max-width: 1120px){
+    #main{
+        height: 45em;
+    }
+    #main .user_img img{
+        width: 25em;
+        height: 25em;
+    }
     .skills{
         height: 100%;
         padding: 5em 0;
