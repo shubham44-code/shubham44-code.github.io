@@ -75,7 +75,7 @@ particlesJS("particles-js", {
 // second paritcl
 particlesJS("particles-js2", {
   particles: {
-    number: { value: 15, density: { enable: true, value_area: 800 } },
+    number: { value: 10, density: { enable: true, value_area: 800 } },
     color: { value: "#b91d73" },
     shape: {
       type: "circle",
@@ -89,9 +89,9 @@ particlesJS("particles-js2", {
       anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
     },
     size: {
-      value: 80,
+      value: 100,
       random: true,
-      anim: { enable: false, speed: 10, size_min: 0.1, sync: false },
+      anim: { enable: false, speed: 20, size_min: 0.1, sync: false },
     },
     line_linked: {
       enable: false,
