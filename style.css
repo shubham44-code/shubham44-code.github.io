@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: var(--secondary-font);
   color: var(--color);
+  /* overflow-x: hidden; */
 }
 :root {
   --bg: #252a34;
@@ -31,7 +32,8 @@ body {
 /* ---------- main section ---------- */
 #main {
   width: 100%;
-  height: 50em;
+  /* height: 50em; */
+    padding: 5em 0;
   backdrop-filter: blur(1px);
   backdrop-filter: contrast(250px);
   position: relative;
@@ -113,6 +115,7 @@ body {
   margin: 2em 0;
   position: relative;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .skills::before,
 .skills::after {
@@ -203,6 +206,7 @@ body {
   position: relative;
   flex-direction: column;
   background: #1a1a1a;
+  overflow-x: hidden;
 }
 .projects::before,
 .projects::after {
@@ -320,9 +324,6 @@ footer .social_media_icons a i{
 }
 /* ---------- Media Query ---------- */
 @media (max-width: 1120px) {
-  #main {
-    height: 45em;
-  }
   #main .user_img img {
     width: 25em;
     height: 25em;
