@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: var(--secondary-font);
   color: var(--color);
-  /* overflow-x: hidden; */
 }
 :root {
   --bg: #252a34;
@@ -21,7 +20,6 @@
 body {
   background: var(--bg);
   color: var(--color);
-  overflow-x: hidden;
 }
 .center {
   display: flex;
@@ -362,8 +360,13 @@ footer .social_media_icons a i{
     font-size: 13px;
   }
   .skill_box .box {
+<<<<<<< HEAD
     margin: 2em .6em;
     width: 10em;
+=======
+    margin: 2em 0.5em;
+    width: 12em;
+>>>>>>> 997b1aba8ad5c6d6f67b9f56093e4e21ac04c46c
     height: 8em;
   }
 }
