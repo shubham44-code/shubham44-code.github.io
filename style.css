@@ -337,6 +337,17 @@ footer .social_media_icons a i{
   justify-content: space-evenly;
   transition: all .4s;
 }
+.toggle .box a{
+  flex-direction: column;
+  text-decoration: none;
+}
+.toggle .box a i{
+  font-size: 18px;
+}
+.toggle .box a p{
+  font-size: 12px;
+  margin-top: 8px
+}
 .toggle .box:nth-child(2){
   width: 100%;
   justify-content: space-evenly;

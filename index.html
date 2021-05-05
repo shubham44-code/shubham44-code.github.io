@@ -30,7 +30,7 @@
     </section>
 
     <!-- about -->
-    <section class="about center">
+    <section class="about center" id="About">
       <h1 class="about_heading">About</h1>
       <p>
         Hello! My name is shubham, and I'm a web developer.<br />
@@ -38,7 +38,7 @@
         to HTML + CSS + javascript.
       </p>
     </section>
-    <section class="skills center">
+    <section class="skills center" id="Skills">
       <p class="skill_head">Skills</p>
       <div class="skill_box center">
         <div class="box">
@@ -68,7 +68,7 @@
       </div>
     </section>
 
-    <section class="projects center">
+    <section class="projects center" id="Projects">
       <h1 class="project_heading">Projects</h1>
       <div class="container center">
         <div class="main_box center">
@@ -177,16 +177,28 @@
 
     <!-- Toggle -->
     <div class="toggle center active" id="toggle">
-      <div class="box">
-        <a href="#main"> <i class="fas fa-home fa-2x"></i></a>
+      <div class="box center">
+          <a href="#main" class="links center"> 
+            <i class="fas fa-home"></i>
+            <p>Home</p>
+          </a>
       </div>
       <div class="box center">
-        <a href="#"> <i class="fas fa-address-card fa-2x"></i></a>
+          <a href="#About" class="links center"> 
+            <i class="fas fa-address-card"></i>
+            <p>About</p>
+          </a>
         <input type="checkbox" name="" id="btn" />
-        <a href="#"> <i class="fas fa-sliders-h fa-2x"></i></a>
+          <a href="#Skills" class="links center"> 
+            <i class="fas fa-sliders-h"></i>
+            <p>Skills</p>
+          </a>
       </div>
       <div class="box">
-        <a href="#"> <i class="fas fa-tasks fa-2x"></i></a>
+          <a href="#Projects" class=" links center"> 
+            <i class="fas fa-tasks"></i>
+            <p>Projects</p>
+          </a>
       </div>
     </div>
 
@@ -195,11 +207,16 @@
     <script>
       const toggle = document.getElementById("toggle");
       const btn = document.getElementById("btn");
+      const links = document.querySelectorAll(".links");
 
       btn.addEventListener("click", (e) => {
         toggle.classList.toggle("active");
       });
-
+      links.forEach((e) => {
+        e.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+        })
+      });
     </script>
   </body>
 </html>
