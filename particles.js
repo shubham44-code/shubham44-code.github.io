@@ -1,16 +1,14 @@
-/* ---- By Devshimitsu ---- */
-
 particlesJS('particles-js', {
 	particles: {
 		number: {
-			value: 140,
+			value: 150,
 			density: {
 				enable: true,
 				value_area: 800
 			}
 		},
 		color: {
-			value: [ '#2EB67D', '#ECB22E', '#E01E5B', '#36C5F0' ]
+			value: '#fff'
 		},
 		shape: {
 			type: 'circle',
@@ -29,7 +27,7 @@ particlesJS('particles-js', {
 		},
 		
 		opacity: {
-			value: 1,
+			value: 0.2,
 			random: false,
 			anim: {
 				enable: false,
@@ -39,7 +37,7 @@ particlesJS('particles-js', {
 			}
 		},
 		size: {
-			value: 8,
+			value: 4,
 			random: true,
 			anim: {
 				enable: false,
@@ -49,7 +47,7 @@ particlesJS('particles-js', {
 			}
 		},
 		line_linked: {
-			enable: true,
+			enable: false,
 			distance: 150,
 			color: '#808080',
 			opacity: 0.4,
@@ -74,11 +72,11 @@ particlesJS('particles-js', {
 		detect_on: 'window',
 		events: {
 			onhover: {
-				enable: true,
+				enable: false,
 				mode: 'repulse'
 			},
 			onclick: {
-				enable: true,
+				enable: false,
 				mode: 'push'
 			}
 		},
